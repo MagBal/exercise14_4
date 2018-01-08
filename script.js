@@ -93,16 +93,13 @@ var MovieElements = movies.map(function(movie) {
             key: movie.id,
             movie: movie
         })
-
     )
 });
 
 var MovieList = React.createClass({
-
     render: function() {
-        return (
-
-            React.createElement('ul', {}, MovieElements)
+    	return (
+        	React.createElement('ul', {}, MovieElements)
         )
     }
 });
