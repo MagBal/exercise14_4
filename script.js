@@ -92,7 +92,7 @@ var MovieList = React.createClass({
         movies: React.PropTypes.array.isRequired,
     },
     render: function() {
-        var MovieElements = movies.map(function(movie) {
+        var MovieElements = this.props.movies.map(function(movie) {
             return React.createElement(Movie, {
                 key: movie.id,
                 movie: movie
@@ -104,8 +104,7 @@ var MovieList = React.createClass({
 
 var element = React.createElement('div', {},
     React.createElement('h1', {}, 'Lista filmów'),
-    React.createElement(MovieList, {
-    movies: movies}),
+    React.createElement(MovieList, {movies: movies}),
 );
 
 ReactDOM.render(element, document.getElementById('app'));
